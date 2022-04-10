@@ -1,0 +1,106 @@
+<View id="1" did="0" type="LinearLayout">
+<ppt>width=-1
+height=-1
+orientation=vertical
+gravity=center</ppt>
+<event></event>
+</View>
+<View id="2" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=闪办网音频获取工具
+textColor=#ffff0055</ppt>
+<event></event>
+</View>
+<View id="3" did="1" type="Button">
+<ppt>width=100dp
+height=50dp
+text=前往闪办网
+textSize=15dp</ppt>
+<event><eventItme type="clicki">hws("http://300ppt.cn/yinxiao/")</eventItme></event>
+</View>
+<View id="4" did="1" type="EditText">
+<ppt>width=-1
+height=50dp
+text=
+hint=音频url
+singleLine=TRUE</ppt>
+<event></event>
+</View>
+<View id="5" did="1" type="Button">
+<ppt>width=100dp
+height=50dp
+text=解析
+textSize=15dp</ppt>
+<event><eventItme type="clicki">ug(4,"text",lj)
+syso(lj)
+f(lj == "")
+{
+ 	 utw(null,"提示","请输入音频链接","OK",false,v)
+	{
+	}
+}
+else f(lj ? "http" && lj ? "300ppt" && lj ? "muban")
+{
+  t()
+  {
+    hs(lj,nei)
+    //syso(nei)
+    sj(nei,"&gt;首页","收藏&lt;",yp)
+    sj(yp,"&lt;/style&gt;","权利",yp)
+    sj(yp," &lt;source src=\"","\" type=\"audio/mpeg\"&gt;",lz)
+    //syso(lz)
+    sj(yp,"&lt;p class=\"picjianjie\"&gt;","请使用软件",xinxi)
+    sr(xinxi,"\n","",xinxi)
+    sr(xinxi," ","",xinxi)
+    strim(xinxi,xinxi)
+    sxb(lz)
+    ufnsui()
+    {
+    tw("已复制"+lz)
+    }
+    ss("链接："+ lz + "\n" + xinxi +"链接已复制到剪切板，可使用浏览器或迅雷等下载工具进行下载。",jx)
+    ufnsui()
+    {
+	  utw(null,"获取成功",jx,"OK",false,v)
+	{
+	}
+    }
+  }
+}
+else
+{
+	  utw(null,"提示","请输入正确链接","OK",false,v)
+	{
+	}
+}</eventItme></event>
+</View>
+<View id="6" did="1" type="TextView">
+<ppt>width=-2
+height=-2
+text=说明：本软件仅供学习交流使用，如果存在版权问题，请立即删除本软件，使用者24小时内自动删除。分享：@tyza</ppt>
+<event></event>
+</View>
+<UIEventset><eventItme type="loading">swh("h",h)
+sn(100/829,dx)
+sn(h*dx,dx)
+ss(dx+"dp",dx)
+us(3,"width",dx)
+sn(50/829,dx)
+sn(h*dx,dx)
+ss(dx+"dp",dx)
+us(3,"height",dx)
+sn(50/829,dx)
+sn(h*dx,dx)
+ss(dx+"dp",dx)
+us(4,"height",dx)
+sn(100/829,dx)
+sn(h*dx,dx)
+ss(dx+"dp",dx)
+us(5,"width",dx)
+sn(50/829,dx)
+sn(h*dx,dx)
+ss(dx+"dp",dx)
+us(5,"height",dx)
+uycl(true)
+ushsp(false)</eventItme></UIEventset>
